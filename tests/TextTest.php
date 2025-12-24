@@ -47,6 +47,10 @@ EXPECTED;
         $result = Text::splitBySpace('　a23　あああ　');
         $this->assertEquals(['a23', 'あああ'], $result);
 
+        // 全角スペース+半角スペース
+        $result = Text::splitBySpace('　a23 あああ　');
+        $this->assertEquals(['a23', 'あああ'], $result);
+
         // タブ
         $result = Text::splitBySpace("\ta23\tあああ\t");
         $this->assertEquals(['a23', 'あああ'], $result);
@@ -57,6 +61,33 @@ EXPECTED;
 
         // 改行
         $result = Text::splitBySpace("\ra23\rあああ\r");
+        $this->assertEquals(['a23', 'あああ'], $result);
+    }
+
+    public function test_explodeBySpace()
+    {
+        // 半角スペース
+        $result = Text::explodeBySpace(' a23 あああ ');
+        $this->assertEquals(['a23', 'あああ'], $result);
+
+        // 全角スペース
+        $result = Text::explodeBySpace('　a23　あああ　');
+        $this->assertEquals(['a23', 'あああ'], $result);
+
+        // 全角スペース+半角スペース
+        $result = Text::explodeBySpace('　a23 あああ　');
+        $this->assertEquals(['a23', 'あああ'], $result);
+
+        // タブ
+        $result = Text::explodeBySpace("\ta23\tあああ\t");
+        $this->assertEquals(['a23', 'あああ'], $result);
+
+        // 改行
+        $result = Text::explodeBySpace("\na23\nあああ\n");
+        $this->assertEquals(['a23', 'あああ'], $result);
+
+        // 改行
+        $result = Text::explodeBySpace("\ra23\rあああ\r");
         $this->assertEquals(['a23', 'あああ'], $result);
     }
 }

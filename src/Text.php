@@ -34,4 +34,17 @@ class Text
             PREG_SPLIT_NO_EMPTY,
         );
     }
+
+    /**
+     * マルチバイト対応で、文字列を空白文字で区切る（エイリアス）
+     *
+     * @see Text::splitBySpace()
+     *
+     * @param string $string
+     * @return string[]
+     */
+    static public function explodeBySpace(string $string): array
+    {
+        return self::splitBySpace($string);
+    }
 }
