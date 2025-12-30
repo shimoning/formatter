@@ -4,15 +4,15 @@ namespace Shimoning\Formatter;
 
 class Excel
 {
-    const BASE = 26;
-    const CODE = 65;
+    public const BASE = 26;
+    public const CODE = 65;
 
     /**
      * 列番号をアルファベットに変換する
      * @param int $index
      * @return string|false
      */
-    static public function alphabet(int $index)
+    public static function alphabet(int $index)
     {
         if ($index < 1) {
             return false;
@@ -35,7 +35,7 @@ class Excel
      * @param string $alphabets
      * @return int|false
      */
-    static public function index(string $alphabets)
+    public static function index(string $alphabets)
     {
         if (empty($alphabets) || ! preg_match('/^[a-zA-z]+$/', $alphabets)) {
             return false;

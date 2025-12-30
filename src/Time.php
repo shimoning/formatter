@@ -11,7 +11,7 @@ class Time
      * @param string $separator
      * @return string
      */
-    static public function number2clock($number, $separator = ':'): string
+    public static function number2clock($number, $separator = ':'): string
     {
         $t0 = \floor($number / 60);
         $t1 = $number % 60;
@@ -25,7 +25,7 @@ class Time
      * @param string $separator
      * @return int
      */
-    static public function clock2number($clock, $separator = ':'): int
+    public static function clock2number($clock, $separator = ':'): int
     {
         $times = \explode($separator, $clock);
         return \count($times) >= 2

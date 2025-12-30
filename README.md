@@ -3,14 +3,19 @@
 
 ## Install
 
-利用するプロジェクトの `composer.json` に以下を追加する。
+利用するプロジェクトの `composer.json` に設定を追加する。
 
-### git コマンドを使う方法
-```cli
+その後以下で composer でインストールを実行する。
+```bash
+composer require shimoning/formatter
+```
+
+### gitコマンドを使って追加する
+```bash
 composer config repositories.shimoning/formatter vcs https://github.com/shimoning/formatter.git
 ```
 
-### 手動で composer.json を編集する方法
+### 手動でcomposer.jsonを編集して追加する
 ```composer.json
 "repositories": {
     "formatter": {
@@ -20,15 +25,18 @@ composer config repositories.shimoning/formatter vcs https://github.com/shimonin
 },
 ```
 
-その後以下でインストールする。
-
-```bash
-composer require shimoning/formatter
-```
-
 ## Support
 
 PHP 7.3 以上
+
+### 動作確認済み環境
+- 7.3
+- 7.4
+- 8.0
+- 8.1
+- 8.2
+- 8.3
+- 8.4
 
 ## Usage
 

@@ -10,7 +10,7 @@ class Sql
      * @param string $text
      * @return string
      */
-    static public function sanitizeTextForSearchQuery(string $text): string
+    public static function sanitizeTextForSearchQuery(string $text): string
     {
         return \str_replace(
             ['\\', '%', '_'],

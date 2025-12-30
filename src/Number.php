@@ -11,7 +11,7 @@ class Number
      * @param string $comma
      * @return int
      */
-    static public function removeComma(string $numeric, $comma = ','): int
+    public static function removeComma(string $numeric, $comma = ','): int
     {
         return (int)(\str_replace($comma, '', $numeric));
     }
@@ -24,7 +24,7 @@ class Number
      * @param string $detachComma
      * @return string
      */
-    static public function numberFormat($numeric, $attachComma = ',', $detachComma = ','): string
+    public static function numberFormat($numeric, $attachComma = ',', $detachComma = ','): string
     {
         try {
             $formatted = \number_format(Number::removeComma($numeric, $detachComma));

@@ -10,7 +10,7 @@ class Text
      * @param string $string
      * @return string
      */
-    static public function trim(string $string): string
+    public static function trim(string $string): string
     {
         return \preg_replace(
             '/\A[\p{Cc}\p{Cf}\p{Z}]++|[\p{Cc}\p{Cf}\p{Z}]++\z/u',
@@ -25,9 +25,9 @@ class Text
      * @param string $string
      * @return string[]
      */
-    static public function splitBySpace(string $string): array
+    public static function splitBySpace(string $string): array
     {
-        return \preg_split(
+        return  \preg_split(
             '/[\p{Cc}\p{Cf}\p{Z}]++/u',
             $string,
             -1,
@@ -43,7 +43,7 @@ class Text
      * @param string $string
      * @return string[]
      */
-    static public function explodeBySpace(string $string): array
+    public static function explodeBySpace(string $string): array
     {
         return self::splitBySpace($string);
     }
