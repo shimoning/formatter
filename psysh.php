@@ -14,6 +14,8 @@ $sh = new \Psy\Shell();
 
 $sh->addCode(sprintf("namespace %s;", __NAMESPACE__));
 
+$_SERVER['HTTP_HOST']='localhost';
+
 $sh->run();
 
 echo "\n-----\nBye.\n";

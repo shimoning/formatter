@@ -1,6 +1,6 @@
 {
     "name": "shimoning/formatter",
-    "version": "0.4.2",
+    "version": "0.5.0",
     "description": "各種変換ユーティリティ",
     "minimum-stability": "stable",
     "type": "library",
@@ -24,7 +24,11 @@
         "excel",
         "array",
         "range",
-        "bound"
+        "bound",
+        "link",
+        "url",
+        "uri",
+        "path"
     ],
     "autoload": {
         "psr-4": {

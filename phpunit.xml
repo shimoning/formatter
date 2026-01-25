@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<phpunit colors="true" verbose="true" bootstrap="vendor/autoload.php" displayDetailsOnPhpunitDeprecations="true">
+<phpunit colors="true" verbose="true" bootstrap="vendor/autoload.php">
     <testsuites>
         <testsuite name="All tests">
             <directory>tests/</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <server name="HTTP_HOST" value="localhost"/>
+    </php>
 </phpunit>
